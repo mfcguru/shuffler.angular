@@ -1,0 +1,19 @@
+<div>
+    <div class="text-center py-5">
+        <button class="btn btn-primary mx-5" (click)="doApiShuffle()" >API Shuffle</button>
+        <button class="btn btn-primary" (click)="doSocketShuffle()">Socket Shuffle</button>
+    </div>
+    <div class="py-5">
+        <div class="container">
+            <div class="row hidden-md-up">
+                <div *ngFor="let card of cards$ | async" class="col-md-1 col-sm-6">
+                    <div class="card border-0 py-1">
+                        <div class="card-block">
+                            <img src="{{url}}{{card.imageUrl}}" class="rounded" style="width:auto; height: 230px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
